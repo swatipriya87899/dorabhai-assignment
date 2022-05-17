@@ -1,0 +1,21 @@
+.navbar_card{
+    width: 25%;
+    padding: 10px 0px;
+    height: 100vh;
+    
+}
+
+.nav_links{
+    padding: 15px 10px;
+}
+
+.nav_links:hover{
+    background-color: #1976d2;
+}
+
+/* Media Query For Mobile Responsive-ness */
+@media screen and (max-width: 480px) {
+    .navbar_card{
+        width: 50%;
+    }
+}

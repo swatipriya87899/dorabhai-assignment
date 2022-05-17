@@ -1,0 +1,18 @@
+.user_details{
+    margin-top: 80px;
+}
+
+.left_information{
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    width: 25%;
+}
+
+.left_infromation_content{
+    padding: 20px 10px;
+}
+
+.left_infromation_content:hover{
+    background-color: #1976d2;
+}

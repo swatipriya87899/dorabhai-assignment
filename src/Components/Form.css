@@ -1,0 +1,16 @@
+.add_user_form{
+    width: 500px;
+    height: 80%;
+    background-color: white;
+   outline: none;
+   margin: auto;
+   margin-top: 70px;
+}
+
+@media only screen and (max-width: 480px) {
+    .add_user_form{
+        width: 320px;
+        height: 60%;
+        margin-top: 100px;
+    }
+}
