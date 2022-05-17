@@ -8,6 +8,9 @@ import "./Add_User_Form.css";
 const Add_User_Form = (props) => {
   const visibility = useContext(Context);
 
+  //For checking whether user is logged in or not
+  const [login, setLogin] = useState(false)
+
   //storing username, password and confirm password in state
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +24,7 @@ const Add_User_Form = (props) => {
   };
 
   const sendDataToBackEnd = () => {
+
     if (password != confirmPassword) alert("Password Does't Match");
     else if (userName === "" || password === "" || confirmPassword === "")
       alert("Please fill all the necessay details");
@@ -46,8 +50,23 @@ const Add_User_Form = (props) => {
       .then((response) => response.json())
 
       // Displaying results to console
-      .then(() => {
-        return alert("You have successfully logged in");
+      .then((res) => {
+
+        //Showing Response
+        console.log(res)
+        if(res.code===141){
+          console.log("invalid")
+        alert("Invalid Username or Password")
+        }
+        else{
+        console.log("valid")
+        alert("You have successfully logged in")
+        }
+
+    
+
+       //Login Message
+        // login ?  alert("You have successfully logged in"):alert("Invalid Username or Password");
       });
   };
 
