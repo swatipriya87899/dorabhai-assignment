@@ -46,7 +46,7 @@ const User_Details = () => {
         <Grid item xs={3}><Navbar_modal></Navbar_modal></Grid>:
 
         //Showing Left Information
-        <Grid item md={3}>
+        <Grid item xs={3}>
           <Box>
             <Card className="left_information">
               {information.map((info) => {
@@ -55,7 +55,7 @@ const User_Details = () => {
             </Card>
           </Box>
         </Grid>}
-        <Grid item md={8}>
+        <Grid item xs={8}>
         <Button variant="contained" style={{marginBottom:"20px"}} onClick={visibility.open_form}>Add User</Button>
           {/* Table for showing Email, Modified and Action */}
           <Card>
